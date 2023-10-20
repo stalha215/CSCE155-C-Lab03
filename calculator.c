@@ -11,7 +11,8 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
 
   double a, b, result;
   int choice;
@@ -31,20 +32,39 @@ int main(int argc, char **argv) {
   printf("(6) log_a(b)\n");
   scanf("%d", &choice);
 
-  if(choice == 1) {
+  if (choice == 1)
+  {
     printf("%f", a + b);
-  } else if(choice == 2) {
+  }
+  else if (choice == 2)
+  {
     result = a - b;
     printf("%f", result);
-  } else if(choice == 3) {
-    //TODO: handle this case (multiplication)
-  } else if(choice == 4) {
-    //TODO: handle this case (division)
-  } else if(choice == 5) {
-    //TODO: handle this case (minimum)
-  } else if(choice == 6) {
-    //TODO: handle this case (log_a(b))
-  } else {
+  }
+  else if (choice == 3)
+  {
+    result = a * b;
+    printf("%.2f", result);
+  }
+  else if (choice == 4)
+  {
+    result = a / b;
+    printf("%.2f", result);
+  }
+  else if (choice == 5)
+  {
+    if (a < b)
+    {
+      result = a;
+    }
+    else
+    {
+      result = b;
+    }
+    printf("Minimum is: %.2f", result);
+  }
+  else
+  {
     printf("Please input a valid operator next time");
   }
 
